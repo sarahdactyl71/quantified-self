@@ -9,12 +9,17 @@ table {
    margin-top: 20px;
 }
 
+tfoot {
+  background-color: #4CAF50;
+  color: white;
+}
+
 th, td {
    text-align: left;
    padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2 }
+tbody tr:nth-child(even){background-color: #f2f2f2 }
 
 th {
    background-color: #4CAF50 ;
