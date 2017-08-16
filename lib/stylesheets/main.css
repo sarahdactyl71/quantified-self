@@ -34,11 +34,20 @@ input {
   width: 100%;
 }
 
-input[type=submit] {
+button, input[type=submit] {
   width: 30%;
   float: right;
   background-color: #4CAF50;
   color: white;
   -webkit-border-radius: 25px;
   border-radius: 25px;
+}
+
+button {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
