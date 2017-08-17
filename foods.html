@@ -8,16 +8,16 @@
 <body>
   <section class="container">
     <h1>Manage Foods</h1>
-    <form class="" action="index.html" method="post">
+    <form class="manage-foods-form" action="index.html" method="post">
       <p>Name </p>
-      <input type="text" name="foodname" placeholder="Please enter a food name"><br>
+      <input type="text" class="food-name-field" name="foodname" placeholder="Please enter a food name"><br>
       <p>Calories </p>
-      <input type="text" name="calories" placeholder="Please enter a calorie amount"><br>
+      <input type="text" class="food-calories-field" name="calories" placeholder="Please enter a calorie amount"><br>
       <input type="submit" class="add-food-button" value="Add Food"><br>
     </form>
-    <form class="" action="index.html" method="post">
+    <form class="" action="index.html" method="get">
       <p>Filter By Name</p>
-      <input type="text" name="foodfilter" placeholder="Start typing a name to filter by food"><br>
+      <input type="text" name="foodfilter" placeholder="Start typing to filter by food"><br>
       <input type="submit" class="filter-food-button" value="Filter Food"><br>
     </form>
     <table class="foods-table">
