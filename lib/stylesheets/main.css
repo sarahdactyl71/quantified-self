@@ -14,6 +14,10 @@ tfoot {
   color: white;
 }
 
+tfoot tr {
+  border: 1px solid gray;
+}
+
 th, td {
    text-align: left;
    padding: 8px;
@@ -50,4 +54,12 @@ button {
 a {
   text-decoration: none;
   color: white;
+}
+
+tr button {
+  width: 75%;
+}
+
+td.hidden {
+  background-color: white;
 }
