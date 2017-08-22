@@ -57,38 +57,38 @@ describe("Food", () => {
         driver.quit();
       });
 
-      // test.it("displays a list of foods", function() {
-      //   driver.get(`${frontEndLocation}`);
-      //   driver.wait(until.elementLocated({css: ".foods-table .food-row"}));
-      //   driver.findElements({css: ".foods-table .food-row"})
-      //   .then(function(foods) {
-      //     assert.lengthOf(foods, 21)
-      //   })
-      // })
-      //
-      // test.it("can add a food", function() {
-      //   driver.get(`${frontEndLocation}`)
-      //   driver.wait(until.elementLocated({css: ".add-food-button"}))
-      //   driver.findElement({css: '.food-name-field'}).sendKeys('Panini')
-      //   driver.findElement({css: '.food-calories-field'}).sendKeys('770')
-      //   driver.findElement({css: '.add-food-button'}).click()
-      //   driver.sleep(1000)
-      //   driver.findElements({css: ".foods-table .food-row"})
-      //   .then(function(foods) {
-      //     assert.lengthOf(foods, 22)
-      //   })
-      // })
-      //
-      // test.it("can delete a food", function() {
-      //   driver.get(`${frontEndLocation}`)
-      //   driver.wait(until.elementLocated({css: ".hidden"}))
-      //   driver.findElement({css: '.hidden'}).click()
-      //   driver.sleep(1000)
-      //   driver.findElements({css: ".foods-table .food-row"})
-      //   .then(function(foods) {
-      //     assert.lengthOf(foods, 21)
-      //   })
-      // })
+      test.it("displays a list of foods", function() {
+        driver.get(`${frontEndLocation}`);
+        driver.wait(until.elementLocated({css: ".foods-table .food-row"}));
+        driver.findElements({css: ".foods-table .food-row"})
+        .then(function(foods) {
+          assert.lengthOf(foods, 21)
+        })
+      })
+
+      test.it("can add a food", function() {
+        driver.get(`${frontEndLocation}`)
+        driver.wait(until.elementLocated({css: ".add-food-button"}))
+        driver.findElement({css: '.food-name-field'}).sendKeys('Panini')
+        driver.findElement({css: '.food-calories-field'}).sendKeys('770')
+        driver.findElement({css: '.add-food-button'}).click()
+        driver.sleep(1000)
+        driver.findElements({css: ".foods-table .food-row"})
+        .then(function(foods) {
+          assert.lengthOf(foods, 22)
+        })
+      })
+
+      test.it("can delete a food", function() {
+        driver.get(`${frontEndLocation}`)
+        driver.wait(until.elementLocated({css: ".hidden"}))
+        driver.findElement({css: '.hidden'}).click()
+        driver.sleep(1000)
+        driver.findElements({css: ".foods-table .food-row"})
+        .then(function(foods) {
+          assert.lengthOf(foods, 21)
+        })
+      })
 
       test.it("can edit a food name", function() {
         driver.get(`${frontEndLocation}`)
@@ -101,8 +101,9 @@ describe("Food", () => {
         driver.sleep(1000)
         driver.findElements({css: ".foods-table .food-name"})
         .then(function(foods) {
-          assert.lengthOf(foods, 20)
-          assert.include(foods, 'Everything Burrito', 'There is a new Everything Burrito')
+          assert.lengthOf(foods, 24)
+          console.log(foods[0])
+          // assert.deepNestedInclude(foods, 'Everything Burrito')
         })
       })
     })
