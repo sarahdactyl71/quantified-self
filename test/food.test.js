@@ -8,6 +8,10 @@ describe("Food", () => {
   describe("attributes", () => {
     const food = new Food({id: "1", name: "pizza", calories: "500"})
 
+    it("is a food", () => {
+      assert.instanceOf(food, Food)
+    })
+
     it("has a name", () => {
       expect(food.name).to.equal("pizza")
     })
