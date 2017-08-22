@@ -102,7 +102,7 @@ describe("Food", () => {
         driver.findElements({css: ".foods-table .food-row"})
         .then(function(foods) {
           assert.lengthOf(foods, 21)
-          assert.includes(foods, 'Orange Juice')
+          assert.equal(includes(foods, 'Orange Juice'), true)
         })
       })
     })
