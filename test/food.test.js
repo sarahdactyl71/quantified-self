@@ -33,9 +33,9 @@ describe("Food", () => {
         const attrs = {id: 1, name: "pizza", calories: 500}
         const food = new Food(attrs)
         const expectedHTML =
-          `<tr class="food-row" data-id=${attrs.id}>
-            <td class="food-name" >${attrs.name}</td>
-            <td class="food-calories" >${attrs.calories}</td>
+          `<tr class="food-row id-${attrs.id}" data-id=${attrs.id}>
+            <td class="food-name id-${attrs.id}" >${attrs.name}</td>
+            <td class="food-calories id-${attrs.id}" >${attrs.calories}</td>
             <td class="hidden"><button type="button" class="delete" name="delete">Delete</button></td>
           </tr>`
         const resultsHTML = food.toHTML()
@@ -93,16 +93,16 @@ describe("Food", () => {
       test.it("can edit a food name", function() {
         driver.get(`${frontEndLocation}`)
         driver.wait(until.elementLocated({css: ".food-name"}))
-        driver.findElement({css: '.food-name'}).click()
+        driver.findElement({css: '.food-name.id-11'}).click()
         driver.sleep(5000)
         driver.findElement({css: 'table input'}).clear()
-        driver.findElement({css: 'table input'}).sendKeys('Bill')
+        driver.findElement({css: 'table input'}).sendKeys('Everything Burrito')
         driver.findElement({css: '.container'}).click()
         driver.sleep(1000)
         driver.findElements({css: ".foods-table .food-name"})
         .then(function(foods) {
           assert.lengthOf(foods, 20)
-          assert.equal(includes(foods, 'Bill'), true)
+          assert.include(foods, 'Everything Burrito', 'There is a new Everything Burrito')
         })
       })
     })
