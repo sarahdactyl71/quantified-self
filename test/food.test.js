@@ -1,6 +1,11 @@
 "use strict"
 var assert = require('chai').assert
 var expect = require('chai').expect
+var webdriver = require('selenium-webdriver')
+var until     = webdriver.until
+var test      = require('selenium-webdriver/testing')
+var frontEndLocation = "http://localhost:8080/foods.html"
+
 const Food = require("../lib/food")
 const pry = require('pryjs')
 
@@ -34,6 +39,71 @@ describe("Food", () => {
           </tr>`
         const resultsHTML = food.toHTML()
         assert.equal(resultsHTML, expectedHTML)
+      })
+    })
+
+    describe("foods.html", function() {
+      var driver;
+      this.timeout(10000);
+
+      test.beforeEach(function() {
+        driver = new webdriver.Builder()
+        .forBrowser('chrome')
+        .build();
+      });
+
+      test.afterEach(function() {
+        driver.quit();
+      });
+
+      // test.it("displays a list of foods", function() {
+      //   driver.get(`${frontEndLocation}`);
+      //   driver.wait(until.elementLocated({css: ".foods-table .food-row"}));
+      //   driver.findElements({css: ".foods-table .food-row"})
+      //   .then(function(foods) {
+      //     assert.lengthOf(foods, 21)
+      //   })
+      // })
+      //
+      // test.it("can add a food", function() {
+      //   driver.get(`${frontEndLocation}`)
+      //   driver.wait(until.elementLocated({css: ".add-food-button"}))
+      //   driver.findElement({css: '.food-name-field'}).sendKeys('Panini')
+      //   driver.findElement({css: '.food-calories-field'}).sendKeys('770')
+      //   driver.findElement({css: '.add-food-button'}).click()
+      //   driver.sleep(1000)
+      //   driver.findElements({css: ".foods-table .food-row"})
+      //   .then(function(foods) {
+      //     assert.lengthOf(foods, 22)
+      //   })
+      // })
+      //
+      // test.it("can delete a food", function() {
+      //   driver.get(`${frontEndLocation}`)
+      //   driver.wait(until.elementLocated({css: ".hidden"}))
+      //   driver.findElement({css: '.hidden'}).click()
+      //   driver.sleep(1000)
+      //   driver.findElements({css: ".foods-table .food-row"})
+      //   .then(function(foods) {
+      //     assert.lengthOf(foods, 21)
+      //   })
+      // })
+
+      test.it("can edit a food name", function() {
+        driver.get(`${frontEndLocation}`)
+        driver.wait(until.elementLocated({css: ".food-name"}))
+        driver.findElement({css: '.food-name'}).click()
+        driver.sleep(5000)
+        driver.findElement({css: 'table input'}).clear()
+        driver.findElement({css: 'table input'}).sendKeys('Orange Juice')
+        driver.findElement({css: '.container'}).click()
+        driver.sleep(1000)
+        driver.findElements({css: ".foods-table .food-row"})
+        .then(function(foods) {
+          // eval(pry.it)
+          assert.lengthOf(foods, 21)
+          assert.include(foods, 'Orange Juice', 'There is a new name')
+        })
       })
     })
   })
