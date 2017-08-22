@@ -5,6 +5,7 @@ var webdriver = require('selenium-webdriver')
 var until     = webdriver.until
 var test      = require('selenium-webdriver/testing')
 var frontEndLocation = "http://localhost:8080/foods.html"
+var includes = require('array-includes')
 
 const Food = require("../lib/food")
 const pry = require('pryjs')
@@ -100,9 +101,8 @@ describe("Food", () => {
         driver.sleep(1000)
         driver.findElements({css: ".foods-table .food-row"})
         .then(function(foods) {
-          // eval(pry.it)
           assert.lengthOf(foods, 21)
-          assert.include(foods, 'Orange Juice', 'There is a new name')
+          assert.includes(foods, 'Orange Juice')
         })
       })
     })
