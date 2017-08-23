@@ -60,6 +60,6 @@ tr button {
   width: 75%;
 }
 
-td.hidden {
+td.hidden, th.hidden {
   background-color: white;
 }
