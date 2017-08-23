@@ -18,12 +18,12 @@
         <tbody>
           <tr class="food-row">
             <td>a</td>
-            <td>b</td>
+            <td>240</td>
             <td class="hidden"><button type="button" name="delete">Delete</button></td>
           </tr>
           <tr class="food-row">
             <td>c</td>
-            <td>d</td>
+            <td>120</td>
             <td class="hidden"><button type="button" name="delete">Delete</button></td>
           </tr>
         </tbody>
@@ -49,7 +49,7 @@
           <tbody>
             <tr class="food-row">
               <td>a</td>
-              <td>b</td>
+              <td>100</td>
               <td class="hidden"><button type="button" name="delete">Delete</button></td>
             </tr>
           </tbody>
@@ -75,7 +75,7 @@
         <tbody>
           <tr class="food-row">
             <td>a</td>
-            <td>b</td>
+            <td>50</td>
             <td class="hidden"><button type="button" name="delete">Delete</button></td>
           </tr>
         </tbody>
@@ -101,7 +101,7 @@
         <tbody>
           <tr class="food-row">
             <td>a</td>
-            <td>b</td>
+            <td>5</td>
             <td class="hidden"><button type="button" name="delete">Delete</button></td>
           </tr>
         </tbody>
@@ -137,26 +137,21 @@
       </table>
     </div>
     <h2>Foods</h2>
-    <button type="button"><a href="foods.html">Create New</a></button>
+    <a href="foods.html"><button type="button">Create New</button></a>
     <h3>Add Selected To</h3>
     <button type="button" name="breakfast">Breakfast</button>
     <button type="button" name="lunch">Lunch</button>
     <button type="button" name="dinner">Dinner</button>
     <button type="button" name="snacks">Snacks</button><br>
     <form class="" action="index.html" method="get">
-      <h3>Search By Name</h3>
-      <input type="text" name="foodfinder" placeholder="Start typing a name to find a food"><br>
-      <input type="submit" value="Find Food"><br>
+      <h3>Filter By Name</h3>
+      <input type="text" class="food-filter-input" name="foodfinder" placeholder="Start typing to filter by food"><br>
     </form>
     <table class="add-foods-table">
       <tr>
+        <th class="hidden"></th>
         <th>Name</th>
         <th>Calories</th>
-      </tr>
-      <tr class="food-row">
-        <input type="checkbox" name="add-food-box" value="">
-        <td>a</td>
-        <td>b</td>
       </tr>
     </table>
   </section>
