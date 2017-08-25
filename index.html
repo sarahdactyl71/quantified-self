@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="/lib/stylesheets/main.css">
   <title>Quantified Self - Diary</title>
@@ -15,17 +16,7 @@
           <th>Name</th>
           <th>Calories</th>
         </tr>
-        <tbody>
-          <tr class="food-row">
-            <td>a</td>
-            <td>240</td>
-            <td class="hidden"><button type="button" name="delete">Delete</button></td>
-          </tr>
-          <tr class="food-row">
-            <td>c</td>
-            <td>120</td>
-            <td class="hidden"><button type="button" name="delete">Delete</button></td>
-          </tr>
+        <tbody class="main-foods">
         </tbody>
         <tfoot>
           <tr>
@@ -46,12 +37,7 @@
           <th>Name</th>
           <th>Calories</th>
         </tr>
-          <tbody>
-            <tr class="food-row">
-              <td>a</td>
-              <td>100</td>
-              <td class="hidden"><button type="button" name="delete">Delete</button></td>
-            </tr>
+          <tbody class="main-foods">
           </tbody>
         <tfoot>
           <tr>
@@ -72,12 +58,7 @@
           <th>Name</th>
           <th>Calories</th>
         </tr>
-        <tbody>
-          <tr class="food-row">
-            <td>a</td>
-            <td>50</td>
-            <td class="hidden"><button type="button" name="delete">Delete</button></td>
-          </tr>
+        <tbody class="main-foods">
         </tbody>
         <tfoot>
           <tr>
@@ -98,12 +79,7 @@
           <th>Name</th>
           <th>Calories</th>
         </tr>
-        <tbody>
-          <tr class="food-row">
-            <td>a</td>
-            <td>5</td>
-            <td class="hidden"><button type="button" name="delete">Delete</button></td>
-          </tr>
+        <tbody class="main-foods">
         </tbody>
         <tfoot>
           <tr>
@@ -117,9 +93,9 @@
         </tfoot>
       </table>
     </div>
-    <div class="breakfast-foods">
+    <div class="totals-foods">
       <h2>Totals</h2>
-      <table class="breakfast-foods-table">
+      <table class="totals-foods-table">
         <tfoot>
           <tr>
             <td>Goal Calories</td>
