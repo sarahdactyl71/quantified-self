@@ -63,3 +63,7 @@ tr button {
 td.hidden, th.hidden {
   background-color: white;
 }
+
+.foodid {
+  display: none;
+}
