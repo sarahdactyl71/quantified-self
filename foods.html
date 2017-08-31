@@ -2,10 +2,30 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/lib/stylesheets/main.css">
   <title>Quantified Self - Manage Foods</title>
 </head>
 <body>
-
+  <section class="container">
+    <h1>Manage Foods</h1>
+    <form class="manage-foods-form" action="index.html" method="post">
+      <p>Name </p>
+      <input type="text" class="food-name-field" name="foodname" placeholder="Please enter a food name"><br>
+      <p>Calories </p>
+      <input type="text" class="food-calories-field" name="calories" placeholder="Please enter a calorie amount"><br>
+      <input type="submit" class="add-food-button" value="Add Food"><br>
+    </form>
+    <form class="" action="index.html" method="get">
+      <p>Filter By Name</p>
+      <input type="text" class="food-filter-input" name="foodfilter" placeholder="Start typing to filter by food"><br>
+    </form>
+    <table class="foods-table">
+      <tr class="foods-table-heading">
+        <th>Name</th>
+        <th class="foods-table-calories-heading">Calories</th>
+      </tr>
+    </table>
+  </section>
   <script src="main.bundle.js"></script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   margin-top: 20px;
+}
+
+tfoot {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tfoot tr {
+  border: 1px solid gray;
+}
+
+th, td {
+   text-align: left;
+   padding: 8px;
+}
+
+tbody tr:nth-child(even){background-color: #f2f2f2 }
+
+th {
+   background-color: #4CAF50 ;
+   color: white;
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+input {
+  width: 100%;
+}
+
+button, input[type=submit] {
+  width: 30%;
+  float: right;
+  background-color: #4CAF50;
+  color: white;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
+button {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+tr button {
+  width: 75%;
+}
+
+td.hidden, th.hidden {
+  background-color: white;
+}
+
+.foodid {
+  display: none;
+}

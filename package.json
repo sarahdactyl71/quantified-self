@@ -23,6 +23,8 @@
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "chai": "^3.5.0",
+    "chai-dom": "^1.5.0",
+    "chai-webdriver": "^1.2.0",
     "chromedriver": "^2.27.2",
     "css-loader": "^0.26.0",
     "jquery": "^3.1.1",
@@ -36,5 +38,9 @@
     "webdriverjs": "^1.7.5",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "array-includes": "^3.0.3",
+    "pryjs": "^1.0.3"
   }
 }

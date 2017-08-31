@@ -1,10 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/lib/stylesheets/main.css">
   <title>Quantified Self - Diary</title>
 </head>
 <body>
+  <section class="container">
+    <h1>Food Log</h1>
+    <div class="breakfast-foods">
+      <h2>Breakfast</h2>
+      <table class="breakfast-foods-table" id="meal-1">
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+        </tr>
+        <tbody class="main-foods">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total Calories</td>
+            <td class="breakfast-total-calories total-calories"></td>
+          </tr>
+          <tr>
+            <td>Remaining Calories</td>
+            <td class="breakfast-remaining-calories meal-remaining-calories"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="lunch-foods">
+      <h2>Lunch</h2>
+      <table class="lunch-foods-table" id="meal-3">
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+        </tr>
+          <tbody class="main-foods">
+          </tbody>
+        <tfoot>
+          <tr>
+            <td>Total Calories</td>
+            <td class="lunch-total-calories total-calores"></td>
+          </tr>
+          <tr>
+            <td>Remaining Calories</td>
+            <td class="lunch-remaining-calories meal-remaining-calories"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="dinner-foods">
+      <h2>Dinner</h2>
+      <table class="dinner-foods-table" id="meal-4">
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+        </tr>
+        <tbody class="main-foods">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total Calories</td>
+            <td class="dinner-total-calories total-calories"></td>
+          </tr>
+          <tr>
+            <td>Remaining Calories</td>
+            <td class="dinner-remaining-calories meal-remaining-calories"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="snacks-foods">
+      <h2>Snacks</h2>
+      <table class="snacks-foods-table" id="meal-2">
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+        </tr>
+        <tbody class="main-foods">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total Calories</td>
+            <td class="snacks-total-calories total-calories">10</td>
+          </tr>
+          <tr>
+            <td>Remaining Calories</td>
+            <td class="snacks-remaining-calories meal-remaining-calories"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="calorie-totals">
+      <h2>Totals</h2>
+      <table class="calorie-totals-table">
+        <tfoot>
+          <tr>
+            <td>Goal Calories</td>
+            <td class="all-meals-total-goal-calories"></td>
+          </tr>
+          <tr>
+            <td>Calories Consumed</td>
+            <td class="all-meals-total-calories"></td>
+          </tr>
+          <tr>
+            <td>Remaining Consumed</td>
+            <td class="all-meals-remaining-calories"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <h2>Foods</h2>
+    <a href="foods.html"><button type="button">Create New</button></a>
+    <h3>Add Selected To</h3>
+    <button type="button" name="breakfast" id="1">Breakfast</button>
+    <button type="button" name="lunch" id="3">Lunch</button>
+    <button type="button" name="dinner" id="4">Dinner</button>
+    <button type="button" name="snacks" id ="2">Snacks</button><br>
+    <form class="" action="index.html" method="get">
+      <h3>Filter By Name</h3>
+      <input type="text" class="food-filter-input" name="foodfinder" placeholder="Start typing to filter by food"><br>
+    </form>
+    <table class="add-foods-table">
+      <tr>
+        <th class="hidden"></th>
+        <th>Name</th>
+        <th>Calories</th>
+      </tr>
+    </table>
+  </section>
 
   <script src="main.bundle.js"></script>
 </body>
