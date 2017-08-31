@@ -10692,7 +10692,7 @@
 
 	Diary.getBreakfastFoods = function () {
 	  $.ajax({
-	    url: "https://quantify-self-api.herokuapp.com/api/v1/meals/1/foods",
+	    url: "https://quantify-self-express-api.herokuapp.com/api/v1/meals/1/foods",
 	    dataType: 'json',
 	    success: function (data) {
 	      $.each(data.foods, function (index, food) {
@@ -10712,7 +10712,7 @@
 
 	Diary.getSnackFoods = function () {
 	  $.ajax({
-	    url: "https://quantify-self-api.herokuapp.com/api/v1/meals/2/foods",
+	    url: "https://quantify-self-express-api.herokuapp.com/api/v1/meals/2/foods",
 	    dataType: 'json',
 	    success: function (data) {
 	      $.each(data.foods, function (index, food) {
@@ -10732,7 +10732,7 @@
 
 	Diary.getLunchFoods = function () {
 	  $.ajax({
-	    url: "https://quantify-self-api.herokuapp.com/api/v1/meals/3/foods",
+	    url: "https://quantify-self-express-api.herokuapp.com/api/v1/meals/3/foods",
 	    dataType: 'json',
 	    success: function (data) {
 	      $.each(data.foods, function (index, food) {
@@ -10752,7 +10752,7 @@
 
 	Diary.getDinnerFoods = function () {
 	  $.ajax({
-	    url: "https://quantify-self-api.herokuapp.com/api/v1/meals/4/foods",
+	    url: "https://quantify-self-express-api.herokuapp.com/api/v1/meals/4/foods",
 	    dataType: 'json',
 	    success: function (data) {
 	      $.each(data.foods, function (index, food) {
